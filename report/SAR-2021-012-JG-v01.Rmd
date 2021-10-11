@@ -1,7 +1,7 @@
 ---
 title: "title"
-subtitle: 'DOCUMENTO: SAR-yyyy-NNN-XX-v01'
-author: '**De:** Felipe Figueiredo **Para:** ___'
+subtitle: 'DOCUMENTO: SAR-2021-012-JG-v01'
+author: '**De:** Felipe Figueiredo **Para:** Josir Gomes'
 date: '**Data:** yyyy-mm-dd'
 output:
   html_document:
@@ -103,7 +103,7 @@ tab_inf %>%
 
 # Referências
 
-- **SAP-yyyy-NNN-XX-v01** -- Plano Analítico para title
+- **SAP-2021-012-JG-v01** -- Plano Analítico para title
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
 
 # Apêndice
@@ -117,11 +117,11 @@ tab_inf %>%
 
 ## Disponibilidade
 
-<!-- Tanto este documento como o plano analítico correspondente (**SAP-yyyy-NNN-XX-v01**) podem ser obtidos no seguinte endereço: -->
+<!-- Tanto este documento como o plano analítico correspondente (**SAP-2021-012-JG-v01**) podem ser obtidos no seguinte endereço: -->
 
 Este documento pode ser obtido no seguinte endereço:
 
-https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/
+https://github.com/philsf-biostat/SAR-2021-012-JG/
 
 ## Dados utilizados
 
