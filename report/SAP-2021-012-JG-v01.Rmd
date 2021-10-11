@@ -1,0 +1,183 @@
+---
+title: "Plano Analítico para title"
+subtitle: 'DOCUMENTO: SAP-yyyy-NNN-XX-v01'
+author: '**De:** Felipe Figueiredo **Para:** ___'
+date: '**Data:** yyyy-mm-dd'
+output:
+  html_document:
+    fig_caption: yes
+    fig_height: 6
+    fig_width: 6
+    keep_md: yes
+    number_sections: yes
+    toc: yes
+  pdf_document:
+    number_sections: yes
+    toc: yes
+  word_document:
+    fig_caption: yes
+    fig_height: 6
+    fig_width: 6
+    reference_docx: misc/style_SAP_pt.docx
+    toc: yes
+toc-title: "Sumário"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+options(scipen = 999)
+library(pander)
+library(knitr)
+library(philsfmisc)
+panderOptions('table.style', 'rmarkdown')
+panderOptions('table.split.table', 160)
+```
+
+---
+
+**Histórico do documento**
+
+```{r history}
+Version <- c("01")
+Changes <- c("Versão inicial")
+history <- cbind(Version, Changes)
+colnames(history) <- c("Versão", "Alterações")
+# pander(history, split.cells = 70)
+kable(history)
+```
+
+---
+
+# Lista de abreviaturas
+
+- d: tamanho de efeito D de Cohen
+- DP: Desvio padrão
+- IIQ: Intervalo Interquartílico
+
+# Introdução
+
+## Contexto
+
+## Objetivos
+
+## Hipóteses
+
+# Dados
+
+```{r cleaning, include=FALSE}
+source("scripts/input.R", encoding = 'UTF-8')
+```
+
+## Dados brutos
+
+## Tabela de dados analíticos
+
+Todas as variáveis da tabela de dados analíticos foram identificadas de acordo com as descrições das variáveis, e os valores foram identificados de acordo com o dicionário de dados providenciado.
+Estas identificações possibilitarão a criação de tabelas de resultados com qualidade de produção final.
+
+Depois dos procedimentos de limpeza e seleção `r ncol(analytical)` variáveis foram incluídas na análise com `r nrow(analytical)` observações.
+A Tabela 1 mostra a estrutura dos dados analíticos.
+
+```{r analytical data}
+analytical_mockup %>%
+  pander(caption = "**Tabela 1** Estrutura da tabela de dados analíticos após seleção e limpeza das variáveis.")
+```
+
+A tabela de dados analíticos serão disponibilizados na versão privada do relatório, e serão omitidas da versão pública do relatório.
+
+# Variáveis do estudo
+
+## Desfechos primário e secundários
+
+## Covariáveis
+
+# Métodos estatísticos
+
+## Análises estatísticas
+
+### Análise descritiva
+
+O perfil epidemiológico de cada grupo do estudo será descrito na baseline.
+As características clínicas e demográficas serão descritas como
+média (DP)
+<!-- mediana (IIQ) -->
+ou frequência e proporção (%),
+conforme apropriado.
+As distribuições serão sumarizadas em tabelas e visualizadas em gráficos exploratórios
+
+### Análise inferencial
+
+Todas as comparações entre os grupos serão avaliadas como análises univariadas.
+Variáveis contínuas serão comparadas entre os grupos com o
+teste t de grupos independentes com a correção de Welch.
+<!-- teste t pareado com a correção de Welch. -->
+<!-- teste de Wilcoxon. -->
+Diferenças nas distribuições de variáveis categóricas serão avaliadas com o teste
+exato de Fisher.
+<!-- qui-quadrado. -->
+<!-- McNemar. -->
+
+### Modelagem estatística
+
+## Significância e Intervalos de Confiança
+
+Todas as análises serão realizadas ao nível de significância de 5%.
+Todos os testes de hipóteses e intervalos de confiança calculados serão
+bicaudais.
+<!-- unicaudais à esquerda. -->
+<!-- unicaudais à direita. -->
+
+## Tamanho da amostra e Poder
+
+```{r}
+n <- analytical %>%
+  count(group) %>%
+  pull(n)
+n1 <- n[1]
+n2 <- n[2]
+total <- sum(n)
+d <- pwr::pwr.t2n.test(n1 = n1, n2 = n2, power = .8, sig.level = .05)$d %>%
+  format.float()
+d <- pwr::pwr.t.test(n = total/2, power = .8, sig.level = .05)$d %>%
+  format.float()
+```
+
+<!-- Os grupos de estudo eram balanceados e o tamanho total da amostra foi `r total` incluindo todos os grupos. -->
+
+<!-- Os grupos do estudo não eram balanceados com -->
+<!-- `r n1` participantes no grupo1 -->
+<!-- e -->
+<!-- `r n2` participantes no grupo2 -->
+<!-- e um total amostral de `r total`. -->
+<!-- Esta análise de poder ajusta para os diferentes tamanhos dos grupos. -->
+
+<!-- Com estes tamanhos amostrais um teste t pode detectar um tamanho de efeito tão grande quanto -->
+<!-- **d = `r d`** -->
+<!-- com poder estatísticod e 80% e um nível de significância de 5% (Cohen, 1988). -->
+
+N/A
+
+## Softwares utilizados
+
+Esta análise será realizada utilizando-se o software `R` versão `r getRversion()`.
+
+<!-- # Resultados -->
+
+# Exceções e Observações
+
+<!-- # Conclusões -->
+
+# Referências
+
+- **SAR-yyyy-NNN-XX-v01** -- title
+<!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
+
+# Apêndice
+
+## Disponibilidade
+
+Tanto este plano analítico como o relatório correspondente (**SAR-yyyy-NNN-XX-v01**) podem ser obtidos no seguinte endereço:
+
+https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/
+
