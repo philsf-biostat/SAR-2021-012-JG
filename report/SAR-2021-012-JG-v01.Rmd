@@ -53,9 +53,11 @@ kable(history)
 
 # Introdução
 
+Aplicar método de seleção estatística ou redução dimensional de variáveis para selecionar as variáveis que têm maior contribuição na explicação da variância observada nos dados, e ajustar modelo de regressão logística para quantificar os efeitos das variáveis incluídas no modelo final.
+
 ## Objetivos
 
-Quantificação do efeito do número de votos, verba de doação e outras características na explicação da classificação de bancada evangélica vs outros.
+Quantificação do efeito do número de votos, doações recebidas e outras características de deputados federais na classificação como pertencendo à bancada evangélica.
 
 ## Recepção e tratamento dos dados
 
