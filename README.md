@@ -45,20 +45,20 @@ https://philsf-biostat.github.io/
 
 <!-- --- -->
 
-[sapviz-v01]: report/SAP-yyyy-NNN-XX-v01.md
-[sapviz-v02]: report/SAP-yyyy-NNN-XX-v02.md
-[sappdf-v01]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/raw/main/report/SAP-yyyy-NNN-XX-v01.pdf
-[sappdf-v02]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/raw/main/report/SAP-yyyy-NNN-XX-v02.pdf
+[sapviz-v01]: report/SAP-2021-012-JG-v01.md
+[sapviz-v02]: report/SAP-2021-012-JG-v02.md
+[sappdf-v01]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-2021-012-JG/raw/main/report/SAP-2021-012-JG-v01.pdf
+[sappdf-v02]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-2021-012-JG/raw/main/report/SAP-2021-012-JG-v02.pdf
 
-[reportviz-v01]: report/SAR-yyyy-NNN-XX-v01.md
-[reportviz-v02]: report/SAR-yyyy-NNN-XX-v02.md
-[pdf-v01]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/raw/main/report/SAR-yyyy-NNN-XX-v01.pdf
-[pdf-v02]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/raw/main/report/SAR-yyyy-NNN-XX-v02.pdf
-[docx-v01]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/raw/main/report/SAR-yyyy-NNN-XX-v01.docx
-[docx-v02]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/raw/main/report/SAR-yyyy-NNN-XX-v02.docx
+[reportviz-v01]: report/SAR-2021-012-JG-v01.md
+[reportviz-v02]: report/SAR-2021-012-JG-v02.md
+[pdf-v01]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-2021-012-JG/raw/main/report/SAR-2021-012-JG-v01.pdf
+[pdf-v02]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-2021-012-JG/raw/main/report/SAR-2021-012-JG-v02.pdf
+[docx-v01]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-2021-012-JG/raw/main/report/SAR-2021-012-JG-v01.docx
+[docx-v02]: https://docs.google.com/viewer?url=https://github.com/philsf-biostat/SAR-2021-012-JG/raw/main/report/SAR-2021-012-JG-v02.docx
 
-[releases]: https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/releases/
-[milestone-v01]: https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/milestone/mmm01
-[v01-project]: https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/projects/ppp01
-[milestone-v02]: https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/milestone/mmm02
-[v02-project]: https://github.com/philsf-biostat/SAR-yyyy-NNN-XX/projects/ppp02
+[releases]: https://github.com/philsf-biostat/SAR-2021-012-JG/releases/
+[milestone-v01]: https://github.com/philsf-biostat/SAR-2021-012-JG/milestone/mmm01
+[v01-project]: https://github.com/philsf-biostat/SAR-2021-012-JG/projects/ppp01
+[milestone-v02]: https://github.com/philsf-biostat/SAR-2021-012-JG/milestone/mmm02
+[v02-project]: https://github.com/philsf-biostat/SAR-2021-012-JG/projects/ppp02
