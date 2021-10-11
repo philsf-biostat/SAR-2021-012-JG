@@ -78,6 +78,8 @@ source("scripts/input.R", encoding = 'UTF-8')
 
 ## Dados brutos
 
+Base de dados recebida contendo características dos deputados federais eleitos em 2018.
+
 ## Tabela de dados analíticos
 
 Todas as variáveis da tabela de dados analíticos foram identificadas de acordo com as descrições das variáveis, e os valores foram identificados de acordo com o dicionário de dados providenciado.
