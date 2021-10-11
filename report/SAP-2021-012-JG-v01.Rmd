@@ -51,6 +51,7 @@ kable(history)
 
 # Lista de abreviaturas
 
+- AIC: Criterio de informaçao de Akaike (do inglês, *Akaike's Information Criterion*)
 - d: tamanho de efeito D de Cohen
 - DP: Desvio padrão
 - IIQ: Intervalo Interquartílico
@@ -109,8 +110,7 @@ As seguintes características dos partidos serão consideradas para inclusão na
 
 ### Análise descritiva
 
-O perfil epidemiológico de cada grupo do estudo será descrito na baseline.
-As características clínicas e demográficas serão descritas como
+As características dos deputados serão descritas, por estado, como
 média (DP)
 <!-- mediana (IIQ) -->
 ou frequência e proporção (%),
@@ -119,17 +119,27 @@ As distribuições serão sumarizadas em tabelas e visualizadas em gráficos exp
 
 ### Análise inferencial
 
-Todas as comparações entre os grupos serão avaliadas como análises univariadas.
-Variáveis contínuas serão comparadas entre os grupos com o
-teste t de grupos independentes com a correção de Welch.
+<!-- Todas as comparações entre os grupos serão avaliadas como análises univariadas. -->
+<!-- Variáveis contínuas serão comparadas entre os grupos com o -->
+<!-- teste t de grupos independentes com a correção de Welch. -->
 <!-- teste t pareado com a correção de Welch. -->
 <!-- teste de Wilcoxon. -->
-Diferenças nas distribuições de variáveis categóricas serão avaliadas com o teste
-exato de Fisher.
+<!-- Diferenças nas distribuições de variáveis categóricas serão avaliadas com o teste -->
+<!-- exato de Fisher. -->
 <!-- qui-quadrado. -->
 <!-- McNemar. -->
 
+As inferências serão baseados no modelo de regressão binomial (cf. seção 5.1.3).
+
 ### Modelagem estatística
+
+A classificação dos deputados como pertencendo ou não à bancada evangélica foi estabelecida por métodos extrâneos aos dados.
+Como o desfecho primário é uma variável binária será criado um modelo de regressão logística para quantificar a contribuição das variáveis disponíveis para explicar a associação com a classificação.
+Não serão incluídos efeitos de interação entre as variáveis.
+
+A técnica de seleção estatística de variáveis "para a frente" (*stepwise forward-selection*) para reduzir o número de variáveis que contribuam para a análise.
+Será usado o critério de p<0,20 para inclusão no modelo multivariado.
+Os modelos intermediários criados serão comparados com o AIC.
 
 ## Significância e Intervalos de Confiança
 
