@@ -5,17 +5,16 @@
 <!-- - v02: substituir ppp01/ppp02 pelo projeto -->
 <!-- - Remover esse bloco -->
 
-# título
+# Classificação estatística de deputados federais como bancada evangélica
 
-Objetivo
+Quantificação do efeito do número de votos, verba de doação e outras características na explicação da classificação de bancada evangélica vs outros.
 
-Análise Estatística para PESSOA (LOCAL, aaaa)
+Análise Estatística para Josir Gomes (Doutorado IBICT/UFRJ, 2021).
 
 ## Análises realizadas
 
 1. Análise descritiva
 1. Análise inferencial
-1. Análise de poder
 1. Modelagem estatística
 
 ## Documentos
