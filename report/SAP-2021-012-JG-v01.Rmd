@@ -106,6 +106,8 @@ O desfecho primário está definido como a classificação entre deputados da ba
 As seguintes características dos deputados federais serão consideradas para inclusão na análise: Número de votos recebidos, posicionamento político, capilaridade, a unidade da federação, o partido (sigla), o sexo e se é o primeiro mandato.
 As seguintes características dos partidos serão consideradas para inclusão na análise:  decil do número de deputados eleitos e decil do número de filiados.
 
+As receitas discriminadas em suas diversas origens não serão consideradas na análise, devido à baixa representatividade de valores em suas distribuições (figura A1).
+
 # Métodos estatísticos
 
 ## Análises estatísticas
@@ -184,6 +186,13 @@ Esta análise será realizada utilizando-se o software `R` versão `r getRversio
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
 
 # Apêndice
+
+## Análise exploratória de dados
+
+```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem."}
+# ![Age](../figures/receitas.png)
+knitr::include_graphics("../figures/receitas.png", error = FALSE)
+```
 
 ## Disponibilidade
 
