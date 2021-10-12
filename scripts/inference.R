@@ -9,9 +9,9 @@
 # template p-value table
 tab_inf <- analytical %>%
   # select
-  select(-id, ) %>%
+  select(-id, -uf, -partido) %>%
   tbl_summary(
-    by = group
+    by = evangelico
   ) %>%
   # include study N
   add_overall() %>%
