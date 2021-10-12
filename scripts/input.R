@@ -39,13 +39,12 @@ data.raw <- data.raw %>%
 analytical <- data.raw %>%
   # select analytic variables
   select(
-    !starts_with("perc"),
+    !starts_with(c("perc", "receita_")),
     -nome,
     -igreja,
     -categoria,
     -filiados,
     # -primeira,
-    -total_receita
   )
 
 # mockup of analytical dataset for SAP and public SAR
