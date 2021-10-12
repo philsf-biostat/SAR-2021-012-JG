@@ -187,16 +187,15 @@ Esta análise será realizada utilizando-se o software `R` versão `r getRversio
 
 # Apêndice
 
-## Análise exploratória de dados
-
-```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem."}
-# ![Age](../figures/receitas.png)
-knitr::include_graphics("../figures/receitas.png", error = FALSE)
-```
-
 ## Disponibilidade
 
 Tanto este plano analítico como o relatório correspondente (**SAR-2021-012-JG-v01**) podem ser obtidos no seguinte endereço:
 
 https://github.com/philsf-biostat/SAR-2021-012-JG/
 
+## Análise exploratória de dados
+
+```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem."}
+# ![Age](../figures/receitas.png)
+knitr::include_graphics("../figures/receitas.png", error = FALSE)
+```
