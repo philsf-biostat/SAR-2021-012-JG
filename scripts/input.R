@@ -15,7 +15,7 @@ data.raw <- read_csv("dataset/eleitos_2018.csv") %>%
 # data cleaning -----------------------------------------------------------
 
 data.raw <- data.raw %>%
-#   filter() %>%
+  #   filter() %>%
   select(
     -eleito,
   )
@@ -24,14 +24,24 @@ data.raw <- data.raw %>%
 
 data.raw <- data.raw %>%
   mutate(
-  id = as.character(id),
+    id = as.character(id),
+    primeira = factor(primeira, levels = c("Primeiro mandato", "Reeleito")),
   )
 
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    # partido = "",
+    partido = "Partido",
+    uf = "UF",
+    capilaridade = "Capilaridade",
+    primeira = "Releição vs primeiro mandato",
+    sexo = "Sexo",
+    evangelico = "Evangélico",
+    num_votos = "Total de votos recebidos",
+    decil_filiados = "Decil do núm. de filiados",
+    decil_deputados = "Decil do núm. de deputados",
+    total_receita = "Total da receita recebida",
   )
 
 # analytical dataset ------------------------------------------------------
