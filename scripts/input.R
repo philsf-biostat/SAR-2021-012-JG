@@ -26,6 +26,7 @@ data.raw <- data.raw %>%
   mutate(
     id = as.character(id),
     primeira = factor(primeira, labels = c("Primeiro mandato", "Reeleito")),
+    sexo = factor(sexo, labels = c("Masculino", "Feminino")),
   )
 
 # labels ------------------------------------------------------------------
@@ -42,6 +43,7 @@ data.raw <- data.raw %>%
     decil_filiados = "Decil do núm. de filiados",
     decil_deputados = "Decil do núm. de deputados",
     total_receita = "Total da receita recebida",
+    posicao = "Índice de Power e Silveira-Rodrigues",
   )
 
 # analytical dataset ------------------------------------------------------
