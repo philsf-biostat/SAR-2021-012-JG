@@ -25,7 +25,7 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   mutate(
     id = as.character(id),
-    primeira = factor(primeira, levels = c("Primeiro mandato", "Reeleito")),
+    primeira = factor(primeira, labels = c("Primeiro mandato", "Reeleito")),
   )
 
 # labels ------------------------------------------------------------------
