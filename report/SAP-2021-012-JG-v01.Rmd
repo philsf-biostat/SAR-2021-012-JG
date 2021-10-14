@@ -195,7 +195,8 @@ https://github.com/philsf-biostat/SAR-2021-012-JG/
 
 ## Análise exploratória de dados
 
-```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem."}
+```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem (agp = receita que veio do Partido ao invés de apoiadores privados (empresariais ou não); agr = setor agrícola; com = setor do comércio; fin = setor específico dos bancos e outras instituições financeiras e imobiliárias; ind = setores da indústria; inf = setor de infra-estrutura; pf = pessoa física; rp = recursos próprios; ser = setor de serviços). "}
+
 # ![Age](../figures/receitas.png)
 knitr::include_graphics("../figures/receitas.png", error = FALSE)
 ```
