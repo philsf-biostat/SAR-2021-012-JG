@@ -52,9 +52,7 @@ kable(history)
 # Lista de abreviaturas
 
 - AIC: Criterio de informaçao de Akaike (do inglês, *Akaike's Information Criterion*)
-- d: tamanho de efeito D de Cohen
 - DP: Desvio padrão
-- IIQ: Intervalo Interquartílico
 
 # Introdução
 
