@@ -1,36 +1,37 @@
 # setup -------------------------------------------------------------------
 # library(data.table)
 library(tidyverse)
-library(readxl)
+# library(readxl)
 # library(lubridate)
 library(labelled)
 
 # data loading ------------------------------------------------------------
 set.seed(42)
-data.raw <- tibble(id=gl(2, 10), group = gl(2, 10), outcome = rnorm(20))
-# data.raw <- read_excel("dataset/file.xlsx") %>%
-#   janitor::clean_names()
+# data.raw <- tibble(id=gl(2, 10), group = gl(2, 10), outcome = rnorm(20))
+data.raw <- read_csv("dataset/eleitos_2018.csv") %>%
+  janitor::clean_names()
 
 
 # data cleaning -----------------------------------------------------------
 
-# data.raw <- data.raw %>%
+data.raw <- data.raw %>%
 #   filter() %>%
-#   select()
+  select(
+    -eleito,
+  )
 
 # data wrangling ----------------------------------------------------------
 
-# data.raw <- data.raw %>%
-#   mutate(
-#
-#   )
+data.raw <- data.raw %>%
+  mutate(
+  id = as.character(id),
+  )
 
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    group = "Study group",
-    outcome = "Study outcome",
+    # partido = "",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -38,9 +39,12 @@ data.raw <- data.raw %>%
 analytical <- data.raw %>%
   # select analytic variables
   select(
-    id,
-    group,
-    outcome,
+    !starts_with(c("perc", "receita_")),
+    -nome,
+    -igreja,
+    -categoria,
+    -filiados,
+    # -primeira,
   )
 
 # mockup of analytical dataset for SAP and public SAR
