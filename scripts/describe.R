@@ -26,9 +26,9 @@ theme_gtsummary_language(language = "pt") # traduzir
 
 tab_desc <- analytical %>%
   # select
-  select(-id, ) %>%
+  select(-id, -partido, -uf) %>%
   tbl_summary(
-    # by = group
+    by = evangelico,
   ) %>%
   # modify_caption(caption = "**Tabela 1** Características demográficas") %>%
   # modify_header(label ~ "**Características dos pacientes**") %>%
