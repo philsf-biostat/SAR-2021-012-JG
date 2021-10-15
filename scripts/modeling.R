@@ -15,7 +15,7 @@ model.dat <- analytical %>%
   drop_na()
 
 k <- qchisq(.20, 1, lower.tail = FALSE) # use p < .20 for selection
-m.min <- glm(formula = evangelico ~ total_receita, family = binomial, 
+m.min <- glm(formula = evangelico ~ 0 + total_receita, family = binomial,
              data = model.dat)
 m.sat <- glm(formula = evangelico ~ ., family = binomial, data = model.dat)
 f.lower <- formula(m.min)
