@@ -15,15 +15,23 @@ model.dat <- analytical %>%
   drop_na()
 
 k <- qchisq(.20, 1, lower.tail = FALSE) # use p < .20 for selection
-m.min <- glm(formula = evangelico ~ 0 + total_receita, family = binomial,
-             data = model.dat)
-m.sat <- glm(formula = evangelico ~ ., family = binomial, data = model.dat)
+m.min <- glm(
+  formula = evangelico ~ total_receita - 1,
+  family = binomial,
+  data = model.dat)
+m.sat <- glm(
+  formula = evangelico ~ .,
+  family = binomial,
+  data = model.dat)
 f.lower <- formula(m.min)
 f.upper <- formula(m.sat)
 # m.step <- step(m.min, scope = list(lower = f.lower, upper = f.upper), direction = "forward", k = k)
 
 # final model - forward
-m.final <- glm(formula = evangelico ~ total_receita + partido + sexo + capilaridade + num_votos - 1, family = binomial, data = model.dat)
+m.final <- glm(
+  formula = evangelico ~ total_receita + partido + sexo + capilaridade + num_votos - 1,
+  family = binomial,
+  data = model.dat)
 
 # final model - dummy vars
 # glm(formula = evangelico ~ total_receita + partidoPRB + posicao + 
