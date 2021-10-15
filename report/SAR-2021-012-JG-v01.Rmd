@@ -119,6 +119,16 @@ tab_desc %>%
 
 ## Modelo
 
+```{r mod_stats}
+est.crude <- inline_text(tab_mod.min, variable = total_receita)
+est.adj <- inline_text(tab_mod.final, variable = total_receita)
+```
+
+A tabela 2 mostra as estimativas de efeito de cada variável que compõe o teste da hipótese central: de que há associação entre a receita total recebida durante a campanha pelos deputados federais do mandato iniciado em 2018 e a classificação como pertencente à bancada evangélica.
+A estimativa bruta (modelo univariado) está significativamente associada com a razão de chances de pertencer à bancada evangélica e indica que os deputados da bancada evangélica tendem a receber 60% menos verba que os outros
+(OR: `r est.crude`).
+A seleção _stepwise_ de variáveis incluiu o partido, o sexo a capilaridade e o número de votos dos deputados.
+
 ```{r tab_mod}
 tab_mod %>%
     as_kable(
