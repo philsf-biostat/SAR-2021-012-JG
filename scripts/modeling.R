@@ -23,7 +23,7 @@ f.upper <- formula(m.sat)
 # m.step <- step(m.min, scope = list(lower = f.lower, upper = f.upper), direction = "forward", k = k)
 
 # final model - forward
-m.final <- glm(formula = evangelico ~ total_receita + partido + sexo + capilaridade + num_votos, family = binomial, data = model.dat)
+m.final <- glm(formula = evangelico ~ total_receita + 0 + partido + sexo + capilaridade + num_votos, family = binomial, data = model.dat)
 
 # final model - dummy vars
 # glm(formula = evangelico ~ total_receita + partidoPRB + posicao + 
