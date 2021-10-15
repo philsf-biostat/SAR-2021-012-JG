@@ -46,7 +46,7 @@ data.raw <- data.raw %>%
     num_votos = "Votos (100k)",
     decil_filiados = "Decil do núm. de filiados",
     decil_deputados = "Decil do núm. de deputados",
-    total_receita = "Total da receita recebida (milhão R$)",
+    total_receita = "Receita total (milhão R$)",
     posicao = "Índice de Power e Silveira-Rodrigues",
     igreja = "Nome da Igreja",
   )
