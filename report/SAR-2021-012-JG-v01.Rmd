@@ -117,7 +117,7 @@ tab_desc %>%
   )
 ```
 
-## Modelo
+## Estimativa da renda total recebida por deputados da bancada evangélica
 
 ```{r mod_stats}
 est.crude <- inline_text(tab_mod.min, variable = total_receita)
