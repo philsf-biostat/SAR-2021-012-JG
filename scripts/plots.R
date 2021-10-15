@@ -27,3 +27,20 @@ gg.receitas <- data.raw %>%
   geom_histogram(binwidth = 100000, fill = ff.col) +
   facet_wrap(~name) +
   labs(x = "", y = "", subtitle = "Distribuição das receitas, por origem")
+
+data.raw %>%
+  filter(!is.na(igreja)) %>%
+  ggplot(aes(igreja)) +
+  geom_bar(fill = ff.col) +
+  coord_flip() +
+  labs(x = "", y = "")
+
+# analytical %>%
+#   select_if(is.factor) %>%
+#   pivot_longer(c(primeira, sexo)) %>%
+#   ggplot(aes(value, fill = evangelico)) +
+#   geom_bar(position = "fill") +
+#   coord_flip() +
+#   facet_wrap(~name) +
+#   scale_color_brewer(palette = ff.pal) +
+#   scale_fill_brewer(palette = ff.pal)

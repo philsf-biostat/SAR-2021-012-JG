@@ -15,7 +15,7 @@ data.raw <- read_csv("dataset/eleitos_2018.csv") %>%
 # data cleaning -----------------------------------------------------------
 
 data.raw <- data.raw %>%
-#   filter() %>%
+  #   filter() %>%
   select(
     -eleito,
   )
@@ -24,18 +24,31 @@ data.raw <- data.raw %>%
 
 data.raw <- data.raw %>%
   mutate(
-  id = as.character(id),
-  total_receita = total_receita/1000000,
-  num_votos = num_votos/100000,
+    id = as.character(id),
+    primeira = factor(primeira, labels = c("Primeiro mandato", "Reeleito")),
+    sexo = factor(sexo, labels = c("Masculino", "Feminino")),
+    evangelico = factor(evangelico, labels = c("Outros", "Evangélico")),
+    igreja = fct_rev(fct_infreq(igreja)),
+    total_receita = total_receita/1000000,
+    num_votos = num_votos/100000,
   )
 
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    # partido = "",
-    total_receita = "Receita (milhão R$)",
-    num_votos = "Votos (100k´)",
+    partido = "Partido",
+    uf = "UF",
+    capilaridade = "Capilaridade",
+    primeira = "Releição vs primeiro mandato",
+    sexo = "Sexo",
+    evangelico = "Evangélico",
+    num_votos = "Votos (100k)",
+    decil_filiados = "Decil do núm. de filiados",
+    decil_deputados = "Decil do núm. de deputados",
+    total_receita = "Total da receita recebida (milhão R$)",
+    posicao = "Índice de Power e Silveira-Rodrigues",
+    igreja = "Nome da Igreja",
   )
 
 # analytical dataset ------------------------------------------------------
