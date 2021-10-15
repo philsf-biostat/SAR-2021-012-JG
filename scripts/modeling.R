@@ -35,6 +35,16 @@ m.final <- glm(formula = evangelico ~ total_receita + 0 + partido + sexo + capil
 
 # adjusted ----------------------------------------------------------------
 
+m.aic <- AIC(m.min, m.final)
+m.final %>%
+  summary()
+# m.final %>%
+#   tidy()
+# m.final %>%
+#   glance()
+
+# table -------------------------------------------------------------------
+
 tab_mod <- tbl_merge(list(
   m.min %>% tbl_regression(exp = TRUE),
   m.final %>% tbl_regression(exp = TRUE)
