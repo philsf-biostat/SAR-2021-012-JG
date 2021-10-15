@@ -35,3 +35,7 @@ m.final <- glm(formula = evangelico ~ total_receita + partido + sexo + capilarid
 
 # adjusted ----------------------------------------------------------------
 
+tab_mod <- tbl_merge(list(
+  m.min %>% tbl_regression(exp = TRUE),
+  m.final %>% tbl_regression(exp = TRUE)
+), tab_spanner = c("Não ajustado", "Ajustado"))
