@@ -181,6 +181,13 @@ e
 SOLIDARIEDADE.
 Não foi possível identificar os partidos com maior participação de deputados evangélicos.
 
+As deputadas mulheres pareciam ser maioria na bancada evangélica, sendo três vezes mais prováveis de pertencer à bancada evangélica quando comparadas aos homens
+(OR: `r inline_text(tab_mod.final, variable = sexo, level = "Feminino")`).
+Apesar de obter uma receita menor os deputados da bancada evangélica atingem uma capilaridade significativamente maior quando comparados aos outros deputados
+(OR: `r inline_text(tab_mod.final, variable = capilaridade)`).
+Por fim, o número de votos parece ser maior, apesar de não ser significativo: para cada 100 mil votos a mais, um deputado tem 26% mais chance de ser da bancada evangélica
+(OR: `r inline_text(tab_mod.final, variable = num_votos)`).
+
 # Exceções e Observações
 
 # Conclusões
