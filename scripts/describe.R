@@ -35,3 +35,6 @@ tab_desc <- analytical %>%
   bold_labels() %>%
   modify_table_styling(columns = "label", align = "c")
 
+data.raw %>%
+  select(evangelico, igreja) %>%
+  tbl_summary(missing = "no")
