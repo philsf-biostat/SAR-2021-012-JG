@@ -123,7 +123,8 @@ tab_desc %>%
 tab_mod %>%
     as_kable(
     align = "lccc",
-    caption = "**Tabela 2** caption"
+    caption = "**Tabela 2** Efeito da receita total recebida por deputados federais na classificação como pertencente à bancada evangélica;
+    modelos não ajustado e ajustado após seleção estatística de variáveis."
   )
 ```
 
