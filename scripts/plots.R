@@ -44,3 +44,7 @@ data.raw %>%
 #   facet_wrap(~name) +
 #   scale_color_brewer(palette = ff.pal) +
 #   scale_fill_brewer(palette = ff.pal)
+
+gg +
+  geom_histogram(aes(total_receita), binwidth = .5) +
+  facet_wrap(~ evangelico)
