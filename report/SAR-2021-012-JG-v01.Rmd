@@ -159,6 +159,28 @@ tab_mod %>%
   )
 ```
 
+O partido do deputado teve contribuição detectável na explicação dos fatores que determinam se o deputado pertence ou não à bancada evangélica.
+No entanto foram considerados trinta partidos e esta análise não possui poder suficiente para detectar os efeitos relativos a todos.
+Pode-se identificar os partidos com proporção de deputados da bancada evangélica significativamente menor quando comparado aos outros deputados:
+DEM,
+MDB,
+NOVO,
+PATRIOTA,
+PDT,
+PODE,
+PP,
+PR,
+PROS,
+PRP,
+PSB,
+PSD,
+PSDB,
+PT,
+PTB
+e
+SOLIDARIEDADE.
+Não foi possível identificar os partidos com maior participação de deputados evangélicos.
+
 # Exceções e Observações
 
 # Conclusões
