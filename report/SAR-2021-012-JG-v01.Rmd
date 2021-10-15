@@ -189,7 +189,7 @@ Apesar de obter uma receita menor os deputados da bancada evangélica atingem um
 (OR: `r inline_text(tab_mod.final, variable = capilaridade)`).
 Por fim, o número de votos parece ser maior, apesar de não ser significativo: para cada 100 mil votos recebidos a mais, a chance de um deputado ser da bancada evangélica é aumentada
 (OR: `r inline_text(tab_mod.final, variable = num_votos)`).
-Esta conclusão é suportada por uma análise univariada *ad-hoc* do efeito desta variável
+Esta interpretação é suportada por uma análise univariada *ad-hoc* do efeito dos votos
 (OR: -0.71 (95% CI -0.90, -0.53; p<0.001)).
 
 
