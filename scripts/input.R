@@ -25,6 +25,8 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   mutate(
   id = as.character(id),
+  total_receita = total_receita/1000000,
+  num_votos = num_votos/100000,
   )
 
 # labels ------------------------------------------------------------------
@@ -32,6 +34,8 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   set_variable_labels(
     # partido = "",
+    total_receita = "Receita (milhão R$)",
+    num_votos = "Votos (100k´)",
   )
 
 # analytical dataset ------------------------------------------------------
