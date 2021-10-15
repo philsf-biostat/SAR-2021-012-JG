@@ -6,26 +6,32 @@
 # library(broom.mixed)
 # library(caret)
 
-# raw estimate ------------------------------------------------------------
-
 model.dat <- analytical %>%
   # cbind(predict(dummyVars(formula = ~ partido + uf, data = analytical), analytical)) %>%
   # select(-id, -partido, -uf) %>%
   select(-id) %>%
   drop_na()
 
-k <- qchisq(.20, 1, lower.tail = FALSE) # use p < .20 for selection
+# raw estimate ------------------------------------------------------------
+
 m.min <- glm(
   formula = evangelico ~ total_receita - 1,
   family = binomial,
   data = model.dat)
+
+# stepwise ----------------------------------------------------------------
+
+k <- qchisq(.20, 1, lower.tail = FALSE) # use p < .20 for selection
 m.sat <- glm(
   formula = evangelico ~ .,
   family = binomial,
   data = model.dat)
 f.lower <- formula(m.min)
 f.upper <- formula(m.sat)
+
 # m.step <- step(m.min, scope = list(lower = f.lower, upper = f.upper), direction = "forward", k = k)
+
+# adjusted ----------------------------------------------------------------
 
 # final model - forward
 m.final <- glm(
@@ -40,8 +46,7 @@ m.final <- glm(
 #       ufGO + `partidoPC do B` + partidoPPS + ufSC, family = binomial, 
 #     data = model.dat)
 
-
-# adjusted ----------------------------------------------------------------
+# diagnostics -------------------------------------------------------------
 
 m.aic <- AIC(m.min, m.final)
 m.final %>%
