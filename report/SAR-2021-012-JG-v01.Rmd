@@ -91,10 +91,10 @@ tab_desc %>%
   )
 ```
 
-## Análise inferencial
+## Modelo
 
-```{r tab_inf}
-tab_inf %>%
+```{r tab_mod}
+tab_mod %>%
     as_kable(
     align = "lccc",
     caption = "**Tabela 2** caption"
