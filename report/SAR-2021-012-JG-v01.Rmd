@@ -157,6 +157,8 @@ tab_mod %>%
     caption = "**Tabela 2** Efeito da receita total recebida por deputados federais na classificação como pertencente à bancada evangélica;
     modelos não ajustado e ajustado após seleção estatística de variáveis."
   )
+# análise ad-hoc num_votos
+# glm(evangelico ~ num_votos -1, analytical, family = binomial) %>% tbl_regression() %>% inline_text(variable = num_votos)
 ```
 
 O partido do deputado teve contribuição detectável na explicação dos fatores que determinam se o deputado pertence ou não à bancada evangélica.
@@ -185,8 +187,11 @@ As deputadas mulheres pareciam ser maioria na bancada evangélica, sendo três v
 (OR: `r inline_text(tab_mod.final, variable = sexo, level = "Feminino")`).
 Apesar de obter uma receita menor os deputados da bancada evangélica atingem uma capilaridade significativamente maior quando comparados aos outros deputados
 (OR: `r inline_text(tab_mod.final, variable = capilaridade)`).
-Por fim, o número de votos parece ser maior, apesar de não ser significativo: para cada 100 mil votos a mais, um deputado tem 26% mais chance de ser da bancada evangélica
+Por fim, o número de votos parece ser maior, apesar de não ser significativo: para cada 100 mil votos recebidos a mais, a chance de um deputado ser da bancada evangélica é aumentada
 (OR: `r inline_text(tab_mod.final, variable = num_votos)`).
+Esta conclusão é suportada por uma análise univariada *ad-hoc* do efeito desta variável
+(OR: -0.71 (95% CI -0.90, -0.53; p<0.001)).
+
 
 # Exceções e Observações
 
