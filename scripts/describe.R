@@ -42,3 +42,8 @@ tab_desc <- analytical %>%
 data.raw %>%
   select(evangelico, igreja) %>%
   tbl_summary(missing = "no")
+
+analytical %>%
+  filter(evangelico == "Evangélico") %>%
+  mutate(partido = fct_infreq(partido)) %>%
+  tbl_summary(include = partido)

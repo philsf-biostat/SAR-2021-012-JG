@@ -144,6 +144,16 @@ Apesar da discrepância nas médias de performance de votos, a variabilidade des
 A variabilidade entre os dois grupos pode ser comparada pelo CV -- o CV dos deputados evangélicos foi 157% enquanto nos outros foi 60%.
 Ambos os grupos tiveram capilaridade semelhante, em torno de 0.8 na média.
 
+Os partidos que mais abrigaram deputados evangélicos foram
+PRB	23 (20%),
+PSL	16 (14%),
+PR	10 (8.6%) e
+os partidos com menor representatividade desta classe foram
+PATRIOTA,
+PMN,
+PRP e
+PTC
+todos com 1 (0.9%) deputado.
 
 ```{r tab_desc}
 tab_desc %>%
