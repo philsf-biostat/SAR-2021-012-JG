@@ -135,7 +135,7 @@ knitr::include_graphics("../figures/receita_total.png", error = FALSE)
 ```
 
 
-## Estimativa da renda total recebida por deputados da bancada evangélica
+## Estimativa da receita total recebida por deputados da bancada evangélica
 
 ```{r mod_stats}
 est.crude <- inline_text(tab_mod.min, variable = total_receita)
@@ -146,14 +146,14 @@ A tabela 2 mostra as estimativas de efeito de cada variável que compõe o teste
 A estimativa bruta (modelo univariado) está significativamente associada com a razão de chances de pertencer à bancada evangélica e indica que os deputados da bancada evangélica tendem a receber 60% menos verba que os outros
 (OR: `r est.crude`).
 
-A seleção _stepwise_ de variáveis incluiu no modelo o partido, o sexo, a capilaridade e o número de votos dos deputados, ajustando a estimativa do efeito da renda total.
+A seleção _stepwise_ de variáveis incluiu no modelo o partido, o sexo, a capilaridade e o número de votos dos deputados, ajustando a estimativa do efeito da receita total.
 A inclusão das novas variáveis causou uma redução do AIC de `r format.float(m.aic$AIC[1])` para `r format.float(m.aic$AIC[2])`, o que indica um ajuste substancialmente melhor do modelo aos dados.
-A estimativa ajustada do efeito da renda total indica um efeito menor que a estimativa bruta, onde a renda dos deputados evangélicos é aproximadamente 23% menor que os outros deputados
+A estimativa ajustada do efeito da receita total indica um efeito menor que a estimativa bruta, onde a receita dos deputados evangélicos é aproximadamente 23% menor que os outros deputados
 (OR: `r est.adj`).
 A OR ajustada não foi significativamente diferente de 1.
 
-A interpretação conjunta destes dois resultados é que, na média, a renda total dos deputados evangélicos é menor que a renda total dos outros deputados.
-No entanto o tamanho do efeito da renda, ajustado pelas outras variáveis, não pode ser estimado com precisão suficiente para quantificar sua magnitude.
+A interpretação conjunta destes dois resultados é que, na média, a receita total dos deputados evangélicos é menor que a receita total dos outros deputados.
+No entanto o tamanho do efeito da receita, ajustado pelas outras variáveis, não pode ser estimado com precisão suficiente para quantificar sua magnitude.
 Ver Observações na seção 5.
 
 ```{r tab_mod}
@@ -203,7 +203,7 @@ e também está associado tanto com a classificação em bancada evangélica
 (OR: 0.49 (95% CI 0.41, 0.59; p<0.001)),
 como com a receita total
 (0.50 (95% CI 0.44, 0.56; p<0.001).
-Como os critérios de confundimento foram preenchidos, esta variável foi mantida no modelo final para corrigir a estimativa do efeito da renda no desfecho do estudo.
+Como os critérios de confundimento foram preenchidos, esta variável foi mantida no modelo final para corrigir a estimativa do efeito da receita no desfecho do estudo.
 
 # Exceções e Observações
 
