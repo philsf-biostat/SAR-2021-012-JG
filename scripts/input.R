@@ -29,6 +29,8 @@ data.raw <- data.raw %>%
     sexo = factor(sexo, labels = c("Masculino", "Feminino")),
     evangelico = factor(evangelico, labels = c("Outros", "Evangélico")),
     igreja = fct_rev(fct_infreq(igreja)),
+    total_receita = total_receita/1000000,
+    num_votos = num_votos/100000,
   )
 
 # labels ------------------------------------------------------------------
@@ -41,10 +43,10 @@ data.raw <- data.raw %>%
     primeira = "Releição vs primeiro mandato",
     sexo = "Sexo",
     evangelico = "Evangélico",
-    num_votos = "Total de votos recebidos",
+    num_votos = "Votos (100k)",
     decil_filiados = "Decil do núm. de filiados",
     decil_deputados = "Decil do núm. de deputados",
-    total_receita = "Total da receita recebida",
+    total_receita = "Receita total (milhão R$)",
     posicao = "Índice de Power e Silveira-Rodrigues",
     igreja = "Nome da Igreja",
   )
