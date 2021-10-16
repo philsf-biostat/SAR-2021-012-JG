@@ -202,7 +202,7 @@ A estimativa ajustada do efeito da receita total indica um efeito menor que a es
 A OR ajustada não foi significativamente diferente de 1.
 
 A interpretação conjunta destes dois resultados é que, na média, a receita total dos deputados evangélicos é menor que a receita total dos outros deputados.
-No entanto o tamanho do efeito da receita, ajustado pelas outras variáveis, não pode ser estimado com precisão suficiente para quantificar sua magnitude.
+No entanto, o tamanho do efeito da receita, ajustado pelas outras variáveis, não pode ser estimado com precisão suficiente para quantificar sua magnitude.
 Ver Observações na seção 5.
 
 ```{r tab_mod}
@@ -218,7 +218,7 @@ tab_mod %>%
 ```
 
 O partido do deputado teve contribuição detectável na explicação dos fatores que determinam se o deputado pertence ou não à bancada evangélica.
-No entanto foram considerados trinta partidos e esta análise não possui poder suficiente para detectar os efeitos relativos a todos.
+No entanto, foram considerados trinta partidos e esta análise não possui poder suficiente para detectar os efeitos relativos a todos.
 Pode-se identificar os partidos com proporção de deputados da bancada evangélica significativamente menor quando comparado aos outros deputados:
 DEM,
 MDB,

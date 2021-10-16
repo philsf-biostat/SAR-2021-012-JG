@@ -51,7 +51,7 @@ kable(history)
 
 # Lista de abreviaturas
 
-- AIC: Criterio de informaçao de Akaike (do inglês, *Akaike's Information Criterion*)
+- AIC: Critério de informação de Akaike (do inglês, *Akaike's Information Criterion*)
 - DP: Desvio padrão
 
 # Introdução
