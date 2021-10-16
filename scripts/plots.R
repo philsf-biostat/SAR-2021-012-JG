@@ -49,6 +49,14 @@ gg.receitas <- data.raw %>%
 #   geom_density(aes(num_votos, fill = evangelico), alpha = .6) +
 #   xlab(attr(analytical$num_votos, "label")) + ylab("")
 
+# gg +
+#   geom_hline(yintercept = mean(analytical$total_receita), lty = 4, size = .2) +
+#   geom_point(aes(num_votos, total_receita, col = evangelico)) +
+#   # geom_vline(xintercept = 4, col = "blue") +
+#   geom_vline(xintercept = 5, col = "red") +
+#   xlab(attr(analytical$num_votos, "label")) +
+#   ylab(attr(analytical$total_receita, "label"))
+
 gg.rec_total <- gg +
   geom_histogram(aes(total_receita), binwidth = .5, fill = ff.col) +
   xlab(attr(analytical$total_receita, "label")) +
