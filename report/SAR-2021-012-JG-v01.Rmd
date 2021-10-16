@@ -1,5 +1,5 @@
 ---
-title: "Classificação estatística de deputados federais como bancada evangélica"
+title: "Quantificação do efeito da receita recebida na classificação como bancada evangélica de deputados federais de 2018"
 subtitle: 'DOCUMENTO: SAR-2021-012-JG-v01'
 author: '**De:** Felipe Figueiredo **Para:** Josir Gomes'
 date: '**Data:** 2021-10-15'
@@ -66,7 +66,7 @@ O posicionamento político dos deputados foi identificado pelo índice de Power 
 
 ## Objetivos
 
-Quantificação do efeito da receita recebida durante a campanha, número de votos e outras características de deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica.
+Criar um modelo explicativo para quantificar o efeito da receita recebida durante a campanha por deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica, ajustado pelo número de votos e outras características dos deputados e seus partidos.
 
 ## Recepção e tratamento dos dados
 
@@ -286,7 +286,7 @@ Não foi possível identificar os partidos com maior participação de deputados
 
 # Referências
 
-- **SAP-2021-012-JG-v01** -- Plano Analítico para Classificação estatística de deputados federais como bancada evangélica.
+- **SAP-2021-012-JG-v01** -- Quantificação do efeito da receita recebida na classificação como bancada evangélica de deputados federais de 2018.
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
 
 # Apêndice
@@ -317,5 +317,5 @@ Os dados utilizados neste relatório não podem ser publicados online por quest�
 # analytical %>%
 #   pander(caption = "**Table A1** Tabela de dados analíticos")
 analytical_mockup %>%
-  pander(caption = "**Table A1** Estrutura da tabela de dados analíticos")
+  pander(caption = "**Tabela A1** Estrutura da tabela de dados analíticos")
 ```

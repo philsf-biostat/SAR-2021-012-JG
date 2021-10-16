@@ -5,9 +5,9 @@
 <!-- - v02: substituir ppp01/ppp02 pelo projeto -->
 <!-- - Remover esse bloco -->
 
-# Classificação estatística de deputados federais como bancada evangélica
+# Quantificação do efeito da receita recebida na classificação como bancada evangélica de deputados federais de 2018
 
-Quantificação do efeito da receita recebida durante a campanha, número de votos e outras características de deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica.
+Criar um modelo explicativo para quantificar o efeito da receita recebida durante a campanha por deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica, ajustado pelo número de votos e outras características dos deputados e seus partidos.
 
 Análise Estatística para Josir Gomes (Doutorado IBICT/UFRJ, 2021).
 
