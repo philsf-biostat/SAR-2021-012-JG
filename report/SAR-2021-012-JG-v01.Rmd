@@ -52,6 +52,7 @@ kable(history)
 # Lista de abreviaturas
 
 - CI: Intervalo de confiança (*confidence interval*)
+- CV: Coeficiente de Variação
 - OR: razão de chances (*odds ratio*)
 
 # Introdução
@@ -127,6 +128,21 @@ Destes,
 29 (25%) estão filiados à igreja AD,
 21 (18%) à igreja IURD e
 15 (13%) à igreja Batista.
+Observa-se nas duas classes de deputados federais uma predominância do sexo masculino, com
+91 (78%) homens entre os deputados evangélicos e
+346 (87%) homens dentre as demais classes
+(Tabela 1).
+
+A maior parte dos deputados federais eleitos em 2018 foram eleitos em primeiro mandato.
+Dentro os deputados evangélicos
+94 (81%) se elegeram pela primeira vez e
+22 (19%) foram reeleitos.
+Os candidatos evangélicos obtiveram, na média, 127 mil votos,
+quando os outros deputados obtiveram 97 mil votos.
+Apesar da discrepância nas médias de performance de votos, a variabilidade deste indicador é substantialmente maior na classe de deputados evangélicos, com desvio padrão superior à média.
+A variabilidade entre os dois grupos pode ser comparada pelo CV -- o CV dos deputados evangélicos foi 157% enquanto nos outros foi 60%.
+Ambos os grupos tiveram capilaridade semelhante, em torno de 0.8 na média.
+
 
 ```{r tab_desc}
 tab_desc %>%

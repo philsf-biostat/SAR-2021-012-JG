@@ -21,6 +21,9 @@ theme_gtsummary_language(language = "pt") # traduzir
 # minimum detectable effect size
 # interpret_d(0.5)
 
+analytical %>%
+  group_by(evangelico) %>%
+  summarise(cv = sd(num_votos, na.rm = TRUE)/mean(num_votos, na.rm = TRUE)*100)
 
 # tables ------------------------------------------------------------------
 
