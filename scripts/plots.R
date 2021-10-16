@@ -45,6 +45,8 @@ data.raw %>%
 #   scale_color_brewer(palette = ff.pal) +
 #   scale_fill_brewer(palette = ff.pal)
 
-gg +
-  geom_histogram(aes(total_receita), binwidth = .5) +
+gg.rec_total <- gg +
+  geom_histogram(aes(total_receita), binwidth = .5, fill = ff.col) +
+  xlab(attr(analytical$total_receita, "label")) +
+  ylab("") +
   facet_wrap(~ evangelico)
