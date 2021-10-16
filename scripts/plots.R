@@ -10,7 +10,8 @@ theme_set(
   theme_classic()
 )
 theme_update(
-  legend.position = "top"
+  legend.position = "top",
+  legend.title = element_blank(),
 )
 
 gg <- ggplot(analytical) +
