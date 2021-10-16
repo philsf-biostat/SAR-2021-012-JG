@@ -28,12 +28,12 @@ gg.receitas <- data.raw %>%
   facet_wrap(~name) +
   labs(x = "", y = "", subtitle = "Distribuição das receitas, por origem")
 
-data.raw %>%
-  filter(!is.na(igreja)) %>%
-  ggplot(aes(igreja)) +
-  geom_bar(fill = ff.col) +
-  coord_flip() +
-  labs(x = "", y = "")
+# data.raw %>%
+#   filter(!is.na(igreja)) %>%
+#   ggplot(aes(igreja)) +
+#   geom_bar(fill = ff.col) +
+#   coord_flip() +
+#   labs(x = "", y = "")
 
 # analytical %>%
 #   select_if(is.factor) %>%
