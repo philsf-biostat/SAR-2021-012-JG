@@ -27,6 +27,7 @@ theme_gtsummary_language(language = "pt") # traduzir
 tab_desc <- analytical %>%
   # select
   select(-id, -partido, -uf) %>%
+  select(total_receita, everything()) %>%
   tbl_summary(
     by = evangelico,
   ) %>%

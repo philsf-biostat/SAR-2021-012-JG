@@ -132,7 +132,7 @@ Destes,
 tab_desc %>%
     as_kable(
     align = "lccc",
-    caption = "**Tabela 1** caption"
+    caption = "**Tabela 1** Características dos deputados federais eleitos em 2018."
   )
 ```
 
