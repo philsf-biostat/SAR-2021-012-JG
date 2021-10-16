@@ -28,12 +28,12 @@ gg.receitas <- data.raw %>%
   facet_wrap(~name) +
   labs(x = "", y = "", subtitle = "Distribuição das receitas, por origem")
 
-data.raw %>%
-  filter(!is.na(igreja)) %>%
-  ggplot(aes(igreja)) +
-  geom_bar(fill = ff.col) +
-  coord_flip() +
-  labs(x = "", y = "")
+# data.raw %>%
+#   filter(!is.na(igreja)) %>%
+#   ggplot(aes(igreja)) +
+#   geom_bar(fill = ff.col) +
+#   coord_flip() +
+#   labs(x = "", y = "")
 
 # analytical %>%
 #   select_if(is.factor) %>%
@@ -44,3 +44,9 @@ data.raw %>%
 #   facet_wrap(~name) +
 #   scale_color_brewer(palette = ff.pal) +
 #   scale_fill_brewer(palette = ff.pal)
+
+gg.rec_total <- gg +
+  geom_histogram(aes(total_receita), binwidth = .5, fill = ff.col) +
+  xlab(attr(analytical$total_receita, "label")) +
+  ylab("") +
+  facet_wrap(~ evangelico)

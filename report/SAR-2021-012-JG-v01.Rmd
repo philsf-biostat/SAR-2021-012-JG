@@ -2,7 +2,7 @@
 title: "Classificação estatística de deputados federais como bancada evangélica"
 subtitle: 'DOCUMENTO: SAR-2021-012-JG-v01'
 author: '**De:** Felipe Figueiredo **Para:** Josir Gomes'
-date: '**Data:** yyyy-mm-dd'
+date: '**Data:** 2021-10-15'
 output:
   html_document:
     fig_caption: yes
@@ -52,6 +52,7 @@ kable(history)
 # Lista de abreviaturas
 
 - CI: Intervalo de confiança (*confidence interval*)
+- CV: Coeficiente de Variação
 - OR: razão de chances (*odds ratio*)
 
 # Introdução
@@ -72,6 +73,9 @@ Quantificação do efeito da receita recebida durante a campanha, número de vot
 Base de dados recebida contendo características dos deputados federais eleitos em 2018.
 Todas as variáveis da tabela de dados analíticos foram identificadas de acordo com as descrições das variáveis, e os valores foram identificados de acordo com o dicionário de dados providenciado.
 Estas identificações possibilitarão a criação de tabelas de resultados com qualidade de produção final.
+
+Foram feitos ajustes de escala em variáveis para facilitar a interpretação das estimativas da análise de regressão.
+O Número de votos foi padronizado em votos por 100 mil e a Receita total em milhões de reais.
 
 # Metodologia
 
@@ -107,7 +111,8 @@ Como o desfecho primário é uma variável binária foi criado um modelo de regr
 Não foram incluídos efeitos de interação entre as variáveis.
 A técnica de seleção estatística de variáveis "para a frente" (*stepwise forward-selection*) para reduzir o número de variáveis que contribuam para a análise.
 Foi usado o critério de p<0,20 para inclusão no modelo multivariado.
-Os modelos intermediários criados foram comparados com o AIC.
+Os modelos criados foram comparados com o AIC.
+Todos os modelos de regressão foram criados sem intercepto.
 
 Todas as análises foram realizadas ao nível de significância de 5%.
 Todos os testes de hipóteses e intervalos de confiança calculados foram
@@ -121,15 +126,65 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 
 ## Análise descritiva
 
+<!-- dados da tabela adhoc em describe.R -->
+Em 2018 foram eleitos 116 (23% dos 512 deputados avaliados) deputados federais que se auto-denominaram evangélicos.
+Destes,
+29 (25%) estão filiados à igreja AD,
+21 (18%) à igreja IURD e
+15 (13%) à igreja Batista.
+Observa-se nas duas classes de deputados federais uma predominância do sexo masculino, com
+91 (78%) homens entre os deputados evangélicos e
+346 (87%) homens dentre as demais classes
+(Tabela 1).
+O deputado federal evangélico parece ter posicionamento político mais alinhado à direita, com índice de Power e Silveira-Rodrigues médio 0.7.
+
+A maior parte dos deputados federais eleitos em 2018 foram eleitos em primeiro mandato.
+Dentro os deputados evangélicos
+94 (81%) se elegeram pela primeira vez e
+22 (19%) foram reeleitos.
+Os candidatos evangélicos obtiveram, na média, 127 mil votos,
+quando os outros deputados obtiveram 97 mil votos.
+Apesar da discrepância nas médias de performance de votos, a variabilidade deste indicador é substantialmente maior na classe de deputados evangélicos, com desvio padrão superior à média.
+A variabilidade entre os dois grupos pode ser comparada pelo CV -- o CV dos deputados evangélicos foi 157% enquanto nos outros foi 60%.
+Ambos os grupos tiveram capilaridade semelhante, em torno de 0.8 na média.
+
+Os partidos tiveram desempenho comparáveis, onde tanto
+o decil do número de deputados eleitos como
+o decil do número de filiados 
+ficaram na faixa entre 0,7 e 0,8 (Tabela 1).
+Os partidos que mais abrigaram os deputados evangélicos eleitos foram o
+PRB com	23 (20%) deputados,
+PSL com	16 (14%),
+PR com	10 (8.6%) e
+os partidos com menor representatividade desta classe foram
+PATRIOTA,
+PMN,
+PRP e
+PTC
+todos com 1 (0.9%) deputado.
+
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
     align = "lccc",
-    caption = "**Tabela 1** caption"
+    caption = "**Tabela 1** Características dos deputados federais eleitos em 2018."
   )
 ```
 
-## Estimativa da renda total recebida por deputados da bancada evangélica
+A receita total obtida pelos deputados evangélicos foi comparável aos demais deputados, com ambas as classes atingindo receita média superior a 1 milhão de reais.
+Os deputados evangélicos obtiveram, na média, 1.08 milhões de reais (desvio padrão 0.7 milhões, CV 64%) e
+os demais deputados 1.12 milhões de reais (desvio padrão 0.7 milhões, CV 60%).
+A amplitude das receitas observadas variou entre
+R\$ 21648 e R\$ 2507377 entre os deputados evangélicos e
+R\$ 12075 e R\$ 2500500 entre os demais (Tabela 1 e Figura 1).
+
+```{r fig1, fig.cap="**Figura 1** Distribuição da receita total dos deputados federais eleitos em 2018."}
+# ![Age](../figures/receita_total.png)
+knitr::include_graphics("../figures/receita_total.png", error = FALSE)
+```
+
+
+## Estimativa da receita total recebida por deputados da bancada evangélica
 
 ```{r mod_stats}
 est.crude <- inline_text(tab_mod.min, variable = total_receita)
@@ -140,14 +195,14 @@ A tabela 2 mostra as estimativas de efeito de cada variável que compõe o teste
 A estimativa bruta (modelo univariado) está significativamente associada com a razão de chances de pertencer à bancada evangélica e indica que os deputados da bancada evangélica tendem a receber 60% menos verba que os outros
 (OR: `r est.crude`).
 
-A seleção _stepwise_ de variáveis incluiu no modelo o partido, o sexo, a capilaridade e o número de votos dos deputados, ajustando a estimativa do efeito da renda total.
+A seleção _stepwise_ de variáveis incluiu no modelo o partido, o sexo, a capilaridade e o número de votos dos deputados, ajustando a estimativa do efeito da receita total.
 A inclusão das novas variáveis causou uma redução do AIC de `r format.float(m.aic$AIC[1])` para `r format.float(m.aic$AIC[2])`, o que indica um ajuste substancialmente melhor do modelo aos dados.
-A estimativa ajustada do efeito da renda total indica um efeito menor que a estimativa bruta, onde a renda dos deputados evangélicos é aproximadamente 23% menor que os outros deputados
+A estimativa ajustada do efeito da receita total indica um efeito menor que a estimativa bruta, onde a receita dos deputados evangélicos é aproximadamente 23% menor que os outros deputados
 (OR: `r est.adj`).
 A OR ajustada não foi significativamente diferente de 1.
 
-A interpretação conjunta destes dois resultados é que, na média, a renda total dos deputados evangélicos é menor que a renda total dos outros deputados.
-No entanto o tamanho do efeito da renda, ajustado pelas outras variáveis, não pode ser estimado com precisão suficiente para quantificar sua magnitude.
+A interpretação conjunta destes dois resultados é que, na média, a receita total dos deputados evangélicos é menor que a receita total dos outros deputados.
+No entanto o tamanho do efeito da receita, ajustado pelas outras variáveis, não pode ser estimado com precisão suficiente para quantificar sua magnitude.
 Ver Observações na seção 5.
 
 ```{r tab_mod}
@@ -197,7 +252,7 @@ e também está associado tanto com a classificação em bancada evangélica
 (OR: 0.49 (95% CI 0.41, 0.59; p<0.001)),
 como com a receita total
 (0.50 (95% CI 0.44, 0.56; p<0.001).
-Como os critérios de confundimento foram preenchidos, esta variável foi mantida no modelo final para corrigir a estimativa do efeito da renda no desfecho do estudo.
+Como os critérios de confundimento foram preenchidos, esta variável foi mantida no modelo final para corrigir a estimativa do efeito da receita no desfecho do estudo.
 
 # Exceções e Observações
 
