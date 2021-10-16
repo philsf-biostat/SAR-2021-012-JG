@@ -132,6 +132,7 @@ Observa-se nas duas classes de deputados federais uma predominância do sexo mas
 91 (78%) homens entre os deputados evangélicos e
 346 (87%) homens dentre as demais classes
 (Tabela 1).
+O deputado federal evangélico parece ter posicionamento político mais alinhado à direita, com índice de Power e Silveira-Rodrigues médio 0.7.
 
 A maior parte dos deputados federais eleitos em 2018 foram eleitos em primeiro mandato.
 Dentro os deputados evangélicos
