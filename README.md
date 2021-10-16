@@ -7,7 +7,7 @@
 
 # Classificação estatística de deputados federais como bancada evangélica
 
-Quantificação do efeito do número de votos, doações recebidas e outras características de deputados federais na classificação como pertencendo à bancada evangélica.
+Quantificação do efeito da receita recebida durante a campanha, número de votos e outras características de deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica.
 
 Análise Estatística para Josir Gomes (Doutorado IBICT/UFRJ, 2021).
 
