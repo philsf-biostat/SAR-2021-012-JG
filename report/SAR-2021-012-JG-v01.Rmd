@@ -91,6 +91,12 @@ tab_desc %>%
   )
 ```
 
+```{r fig1, fig.cap="**Figura 1** Distribuição da receita total dos deputados federais eleitos em 2018."}
+# ![Age](../figures/receita_total.png)
+knitr::include_graphics("../figures/receita_total.png", error = FALSE)
+```
+
+
 ## Análise inferencial
 
 ```{r tab_inf}
