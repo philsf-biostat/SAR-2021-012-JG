@@ -45,6 +45,10 @@ gg.receitas <- data.raw %>%
 #   scale_color_brewer(palette = ff.pal) +
 #   scale_fill_brewer(palette = ff.pal)
 
+# gg +
+#   geom_density(aes(num_votos, fill = evangelico), alpha = .6) +
+#   xlab(attr(analytical$num_votos, "label")) + ylab("")
+
 gg.rec_total <- gg +
   geom_histogram(aes(total_receita), binwidth = .5, fill = ff.col) +
   xlab(attr(analytical$total_receita, "label")) +

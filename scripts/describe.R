@@ -30,6 +30,9 @@ analytical %>%
   transmute(total_receita*1000000) %>%
   skimr::skim()
 
+analytical %>%
+  filter(num_votos > 5)
+
 # tables ------------------------------------------------------------------
 
 tab_desc <- analytical %>%
