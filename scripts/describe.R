@@ -25,6 +25,11 @@ analytical %>%
   group_by(evangelico) %>%
   summarise(cv = sd(num_votos, na.rm = TRUE)/mean(num_votos, na.rm = TRUE)*100)
 
+analytical %>%
+  group_by(evangelico) %>%
+  transmute(total_receita*1000000) %>%
+  skimr::skim()
+
 # tables ------------------------------------------------------------------
 
 tab_desc <- analytical %>%
