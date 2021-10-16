@@ -167,7 +167,7 @@ tab_desc %>%
   )
 ```
 
-A receita total obtida pelos deputados evangélicos foi comparável aos demais deputados, com média superior a 1 milhão de reais.
+A receita total obtida pelos deputados evangélicos foi comparável aos demais deputados, com ambas as classes atingindo receita média superior a 1 milhão de reais.
 Os deputados evangélicos obtiveram, na média, 1.08 milhões de reais (desvio padrão 0.7 milhões, CV 64%) e
 os demais deputados 1.12 milhões de reais (desvio padrão 0.7 milhões, CV 60%).
 A amplitude das receitas observadas variou entre
