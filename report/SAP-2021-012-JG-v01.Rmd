@@ -1,5 +1,5 @@
 ---
-title: "Plano Analítico para Classificação estatística de deputados federais como bancada evangélica"
+title: "Plano Analítico para Quantificação do efeito da receita recebida na classificação como bancada evangélica de deputados federais de 2018"
 subtitle: 'DOCUMENTO: SAP-2021-012-JG-v01'
 author: '**De:** Felipe Figueiredo **Para:** Josir Gomes'
 date: '**Data:** 2021-10-12'
@@ -51,7 +51,7 @@ kable(history)
 
 # Lista de abreviaturas
 
-- AIC: Criterio de informaçao de Akaike (do inglês, *Akaike's Information Criterion*)
+- AIC: Critério de informação de Akaike (do inglês, *Akaike's Information Criterion*)
 - DP: Desvio padrão
 
 # Introdução
@@ -62,7 +62,7 @@ Aplicar método de seleção estatística ou redução dimensional de variáveis
 
 ## Objetivos
 
-Quantificação do efeito da receita recebida durante a campanha, número de votos e outras características de deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica.
+Criar um modelo explicativo para quantificar o efeito da receita recebida durante a campanha por deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica, ajustado pelo número de votos e outras características dos deputados e seus partidos.
 
 ## Hipóteses
 
@@ -77,6 +77,8 @@ source("scripts/input.R", encoding = 'UTF-8')
 ## Dados brutos
 
 Base de dados recebida contendo características dos deputados federais eleitos em 2018.
+
+A classificação dos deputados como pertencendo ou não à bancada evangélica foi estabelecida por autodenominação, isto é, foram considerados evangélicos os deputados que se autodenominam como tal.
 
 ## Tabela de dados analíticos
 
@@ -135,7 +137,6 @@ As inferências serão baseados no modelo de regressão binomial (cf. seção 5.
 
 ### Modelagem estatística
 
-A classificação dos deputados como pertencendo ou não à bancada evangélica foi estabelecida por métodos extrâneos aos dados.
 Como o desfecho primário é uma variável binária será criado um modelo de regressão logística para quantificar a contribuição das variáveis disponíveis para explicar a associação com a classificação.
 Não serão incluídos efeitos de interação entre as variáveis.
 
@@ -180,7 +181,7 @@ Esta análise será realizada utilizando-se o software `R` versão `r getRversio
 
 # Referências
 
-- **SAR-2021-012-JG-v01** -- Quantificação do efeito do número de votos, verba de doação e outras características na explicação da classificação de bancada evangélica vs outros.
+- **SAR-2021-012-JG-v01** -- Quantificação do efeito da receita recebida na classificação como bancada evangélica de deputados federais de 2018.
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
 
 # Apêndice
@@ -193,7 +194,7 @@ https://github.com/philsf-biostat/SAR-2021-012-JG/
 
 ## Análise exploratória de dados
 
-```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem (agp = receita que veio do Partido ao invés de apoiadores privados (empresariais ou não); agr = setor agrícola; com = setor do comércio; fin = setor específico dos bancos e outras instituições financeiras e imobiliárias; ind = setores da indústria; inf = setor de infra-estrutura; pf = pessoa física; rp = recursos próprios; ser = setor de serviços). "}
+```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem (agp = receita que veio do Partido ao invés de apoiadores privados (empresariais ou não); agr = setor agrícola; com = setor do comércio; fin = setor específico dos bancos e outras instituições financeiras e imobiliárias; ind = setores da indústria; inf = setor de infraestrutura; pf = pessoa física; rp = recursos próprios; ser = setor de serviços). "}
 
 # ![Age](../figures/receitas.png)
 knitr::include_graphics("../figures/receitas.png", error = FALSE)
