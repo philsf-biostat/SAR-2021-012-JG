@@ -158,7 +158,8 @@ tab_mod %>%
     modelos não ajustado e ajustado após seleção estatística de variáveis."
   )
 # análise ad-hoc num_votos
-# glm(evangelico ~ num_votos -1, analytical, family = binomial) %>% tbl_regression() %>% inline_text(variable = num_votos)
+# glm(evangelico ~ num_votos -1, analytical, family = binomial) %>% tbl_regression(exp = TRUE) %>% inline_text(variable = num_votos)
+# lm(total_receita ~ num_votos -1, analytical) %>% tbl_regression() %>% inline_text(variable = num_votos)
 ```
 
 O partido do deputado teve contribuição detectável na explicação dos fatores que determinam se o deputado pertence ou não à bancada evangélica.
@@ -187,18 +188,25 @@ As deputadas mulheres pareciam ser maioria na bancada evangélica, sendo três v
 (OR: `r inline_text(tab_mod.final, variable = sexo, level = "Feminino")`).
 Apesar de obter uma receita menor os deputados da bancada evangélica atingem uma capilaridade significativamente maior quando comparados aos outros deputados
 (OR: `r inline_text(tab_mod.final, variable = capilaridade)`).
-Por fim, o número de votos parece ser maior, apesar de não ser significativo: para cada 100 mil votos recebidos a mais, a chance de um deputado ser da bancada evangélica é aumentada
-(OR: `r inline_text(tab_mod.final, variable = num_votos)`).
-Esta interpretação é suportada por uma análise univariada *ad-hoc* do efeito dos votos
-(OR: -0.71 (95% CI -0.90, -0.53; p<0.001)).
 
+Por fim, o número de votos parece ser um fator de confundimento.
+<!-- Apesar de não ser significativo: para cada 100 mil votos recebidos a mais, a chance de um deputado ser da bancada evangélica parece aumentada no modelo ajustado -->
+<!-- (OR: `r inline_text(tab_mod.final, variable = num_votos)`). -->
+O número de votos não está na cadeia causal entre a receita e a classificação de bancada evangélica,
+e também está associado tanto com a classificação em bancada evangélica
+(OR: 0.49 (95% CI 0.41, 0.59; p<0.001)),
+como com a receita total
+(0.50 (95% CI 0.44, 0.56; p<0.001).
+Como os critérios de confundimento foram preenchidos, esta variável foi mantida no modelo final para corrigir a estimativa do efeito da renda no desfecho do estudo.
 
 # Exceções e Observações
 
 # Conclusões
 
 Durante a campanha os deputados federais da bancada evangélica recebem, tipicamente, uma receita total menor quando comparados aos outros deputados.
-Apesar disso, eles recebem 26% mais votos e atingem maior capilaridade que os deputados não evangélicos.
+Apesar disso, eles
+<!-- recebem 26% mais votos e -->
+atingem maior capilaridade que os deputados não evangélicos.
 Deputadas mulheres tem três vezes mais chance de pertencerem à bancada evangélica que homens.
 
 Os partidos com menor proporção de deputados evangélicos são o
