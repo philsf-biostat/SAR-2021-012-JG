@@ -121,6 +121,13 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 
 ## Análise descritiva
 
+<!-- dados da tabela adhoc em describe.R -->
+Em 2018 foram eleitos 116 (23% dos 512 deputados avaliados) deputados federais que se auto-denominaram evangélicos.
+Destes,
+29 (25%) estão filiados à igreja AD,
+21 (18%) à igreja IURD e
+15 (13%) à igreja Batista.
+
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
