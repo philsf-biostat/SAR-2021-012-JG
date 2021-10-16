@@ -254,7 +254,7 @@ como com a receita total
 (0.50 (95% CI 0.44, 0.56; p<0.001).
 Como os critérios de confundimento foram preenchidos, esta variável foi mantida no modelo final para corrigir a estimativa do efeito da receita no desfecho do estudo.
 
-# Exceções e Observações
+# Observações e Limitações
 
 # Conclusões
 
