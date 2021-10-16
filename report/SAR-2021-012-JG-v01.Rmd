@@ -127,7 +127,7 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 ## Análise descritiva
 
 <!-- dados da tabela adhoc em describe.R -->
-Em 2018 foram eleitos 116 (23% dos 512 deputados avaliados) deputados federais que se auto-denominaram evangélicos.
+Em 2018 foram eleitos 116 (23% dos 512 deputados avaliados) deputados federais que se autodenominaram evangélicos.
 Destes,
 29 (25%) estão filiados à igreja AD,
 21 (18%) à igreja IURD e
@@ -144,7 +144,7 @@ Dentro os deputados evangélicos
 22 (19%) foram reeleitos.
 Os candidatos evangélicos obtiveram, na média, 127 mil votos,
 quando os outros deputados obtiveram 97 mil votos.
-Apesar da discrepância nas médias de performance de votos, a variabilidade deste indicador é substantialmente maior na classe de deputados evangélicos, com desvio padrão superior à média.
+Apesar da discrepância nas médias de performance de votos, a variabilidade deste indicador é substancialmente maior na classe de deputados evangélicos, com desvio padrão superior à média.
 A variabilidade entre os dois grupos pode ser comparada pelo CV -- o CV dos deputados evangélicos foi 157% enquanto nos outros foi 60%.
 Ambos os grupos tiveram capilaridade semelhante, em torno de 0.8 na média.
 
@@ -293,7 +293,7 @@ Não foi possível identificar os partidos com maior participação de deputados
 
 ## Análise exploratória de dados
 
-```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem (agp = receita que veio do Partido ao invés de apoiadores privados (empresariais ou não); agr = setor agrícola; com = setor do comércio; fin = setor específico dos bancos e outras instituições financeiras e imobiliárias; ind = setores da indústria; inf = setor de infra-estrutura; pf = pessoa física; rp = recursos próprios; ser = setor de serviços). "}
+```{r A1, fig.cap="**Figura A1** Distribuição das receitas de deputados federais, por origem (agp = receita que veio do Partido ao invés de apoiadores privados (empresariais ou não); agr = setor agrícola; com = setor do comércio; fin = setor específico dos bancos e outras instituições financeiras e imobiliárias; ind = setores da indústria; inf = setor de infraestrutura; pf = pessoa física; rp = recursos próprios; ser = setor de serviços). "}
 
 # ![Age](../figures/receitas.png)
 knitr::include_graphics("../figures/receitas.png", error = FALSE)
