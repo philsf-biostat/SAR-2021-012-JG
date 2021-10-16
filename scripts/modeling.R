@@ -58,7 +58,13 @@ m.final %>%
 
 # table -------------------------------------------------------------------
 
+tab_mod.min <- m.min %>%
+  tbl_regression(exp = TRUE) %>%
+  bold_labels()
+tab_mod.final <- m.final %>%
+  tbl_regression(exp = TRUE) %>%
+  bold_labels()
 tab_mod <- tbl_merge(list(
-  tab_mod.min <- m.min %>% tbl_regression(exp = TRUE),
-  tab_mod.final <- m.final %>% tbl_regression(exp = TRUE)
-), tab_spanner = c("Não ajustado", "Ajustado"))
+  tab_mod.min,
+  tab_mod.final
+), tab_spanner = c("Bruta (não ajustada)", "Ajustada"))
