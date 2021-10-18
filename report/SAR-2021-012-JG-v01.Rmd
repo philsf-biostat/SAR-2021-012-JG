@@ -259,11 +259,19 @@ Como os critérios de confundimento foram preenchidos, esta variável foi mantid
 
 # Observações e Limitações
 
+Quando apenas a receita recebida pro deputados federais foi considerada, a análise univariada indica um associação negativa com a chance de um deputado federal se autodenominar evangélico, mas o efeito da receita não pôde ser quantificado na presença de covariáveis.
+
+Diversas hipóteses podem explicar isto, das quais uma delas é a falta de poder para detectar consistentemente tal efeito.
+A inclusão do partido teve um impacto considerável no ajuste do modelo, pois é uma variável categórica com muitas categorias.
+
+A UF não apresentou uma relação sinal/ruído suficientemente vantajosa para ser incluída, portanto o modelo ajustado não considera a estrutura geográfica dos dados.
+Assim como o partido esta variável também poderia impactar negativamente o ajuste do modelo final.
+
 - interpretação: características dos evangélicos eleitos em 2018
-- interpretação: dois modelos divergem, possivelmente falta de poder
-- partido: categorias demais (30)
-- uf não entrou: modelo final não tem estrutura geográfica
-- uf: categorias demais
+- ~~interpretação: dois modelos divergem, possivelmente falta de poder~~
+- ~~partido: categorias demais (30)~~
+- ~~uf não entrou: modelo final não tem estrutura geográfica~~
+- ~~uf: categorias demais~~
 - confundimento: votos, evangélicos tem variabilidade demais
 
 # Conclusões
