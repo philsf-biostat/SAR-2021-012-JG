@@ -116,7 +116,7 @@ As distribuições foram sumarizadas em tabelas e visualizadas em gráficos expl
 As inferências foram baseados no modelo de regressão binomial.
 Como o desfecho primário é uma variável binária foi criado um modelo de regressão logística para quantificar a contribuição das variáveis disponíveis para explicar a associação com a classificação.
 Não foram incluídos efeitos de interação entre as variáveis.
-A técnica de seleção estatística de variáveis "para a frente" (*stepwise forward-selection*) para reduzir o número de variáveis que contribuam para a análise.
+A técnica de seleção estatística de variáveis "para a frente" (*stepwise forward-selection*) para reduzir o número de variáveis que contribuam para a análise (Draper e Smith, 1981).
 Foi usado o critério de p<0,20 para inclusão no modelo multivariado.
 Os modelos criados foram comparados com o AIC.
 Todos os modelos de regressão foram criados sem intercepto.
@@ -310,6 +310,7 @@ Não foi possível identificar os partidos com maior participação de deputados
 # Referências
 
 - **SAP-2021-012-JG-v01** -- Quantificação do efeito da receita recebida na autodenominação como evangélicos em deputados federais de 2018.
+- Draper, N. and Smith, H. (1981) Applied Regression Analysis, 2d Edition, New York: John Wiley & Sons, Inc.
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
 
 # Apêndice
