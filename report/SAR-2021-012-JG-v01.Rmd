@@ -276,12 +276,10 @@ A inclusão do partido teve um impacto considerável no ajuste do modelo, pois �
 A UF não apresentou uma relação sinal/ruído suficientemente vantajosa para ser incluída, portanto o modelo ajustado não considera a estrutura geográfica dos dados.
 Assim como o partido esta variável também poderia impactar negativamente o ajuste do modelo final.
 
-- ~~interpretação: características dos evangélicos eleitos em 2018~~
-- ~~interpretação: dois modelos divergem, possivelmente falta de poder~~
-- ~~partido: categorias demais (30)~~
-- ~~uf não entrou: modelo final não tem estrutura geográfica~~
-- ~~uf: categorias demais~~
-- confundimento: votos, evangélicos tem variabilidade demais
+Por fim, o número de votos foi identificado como um fator de confundimento na análise.
+De fato, além da grande variabilidade percebida no grupo dos evangélicos, o número de votos também possui valores extremos (*outliers*) , o que dificulta a interpretação dos resultados.
+Dentre os candidatos com mais votos, um obteve receita superior a dois milhões de reais e dois obtiveram receitas bem abaixo da média, em torno de 200 milhões de reais.
+Como o número de votos é determinante na eleição, a variável foi mantida no modelo para corrigir o confundimento causado entre as variáveis de interesse da análise.
 
 # Conclusões
 
