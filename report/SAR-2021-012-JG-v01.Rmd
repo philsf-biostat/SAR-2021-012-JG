@@ -66,6 +66,10 @@ deputados federais evangélicos que foram eleitos em 2018 podem ser identificado
 
 O posicionamento político dos deputados foi identificado pelo índice de Power e Silveira-Rodrigues que varia de -1 a 1, onde -1 é mais à esquerda e 1 mais à direita.
 
+A capilaridade é um índice de 0 a 1 que indica quão ampla (sob o ponto de vista geográfico) foi a votação do candidato.
+Quanto maior o número de zonas eleitorais onde o candidato recebeu votos, maior o índice.
+Este indicador é a média dos percentis de cada zona eleitoral em que o candidato concorreu.
+
 ## Objetivos
 
 Criar um modelo explicativo para quantificar o efeito da receita recebida durante a campanha por deputados federais eleitos em 2018 na probabilidade de um deputado federal se autodenominar como evangélico, ajustado pelo número de votos e outras características dos deputados e seus partidos.
@@ -79,7 +83,7 @@ Estas identificações possibilitarão a criação de tabelas de resultados com 
 A classificação dos deputados como pertencendo ou à classe evangélica foi estabelecida por autodenominação, isto é, foram considerados evangélicos os deputados que se autodenominaram como tal.
 
 Foram feitos ajustes de escala em variáveis para facilitar a interpretação das estimativas da análise de regressão.
-O Número de votos foi padronizado em votos por 100 mil e a Receita total em milhões de reais.
+O número de votos foi padronizado em votos por 100 mil, a capilaridade foi padronizada em faixas de 10% e a Receita total em milhões de reais.
 
 # Metodologia
 
@@ -244,7 +248,7 @@ Não foi possível identificar os partidos com maior participação de deputados
 
 As deputadas mulheres pareciam ser maioria entre os evangélicos, sendo três vezes mais prováveis de se autodenomiarem evangélicas quando comparadas aos homens
 (OR: `r inline_text(tab_mod.final, variable = sexo, level = "Feminino")`).
-Apesar de obter uma receita menor os deputados evangélicos atingem uma capilaridade significativamente maior quando comparados aos outros deputados
+Apesar de obter uma receita menor os deputados evangélicos atingem uma capilaridade 25% maior quando comparados aos outros deputados
 (OR: `r inline_text(tab_mod.final, variable = capilaridade)`).
 
 Por fim, o número de votos parece ser um fator de confundimento.
@@ -279,7 +283,7 @@ Assim como o partido esta variável também poderia impactar negativamente o aju
 Durante a campanha os deputados federais evangélicos recebem, tipicamente, uma receita total menor quando comparados aos outros deputados.
 Apesar disso, eles
 <!-- recebem 26% mais votos e -->
-atingem maior capilaridade que os deputados não evangélicos.
+atingem capilaridade 25% maior que os deputados não evangélicos.
 Deputadas mulheres têm três vezes mais chance de serem evangélicas do que homens.
 
 Os partidos com menor proporção de deputados evangélicos são o
