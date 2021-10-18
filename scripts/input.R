@@ -31,6 +31,7 @@ data.raw <- data.raw %>%
     igreja = fct_rev(fct_infreq(igreja)),
     total_receita = total_receita/1000000,
     num_votos = num_votos/100000,
+    capilaridade = capilaridade*10,
   )
 
 # labels ------------------------------------------------------------------
@@ -39,7 +40,7 @@ data.raw <- data.raw %>%
   set_variable_labels(
     partido = "Partido",
     uf = "UF",
-    capilaridade = "Capilaridade",
+    capilaridade = "Capilaridade (10%)",
     primeira = "Releição vs primeiro mandato",
     sexo = "Sexo",
     evangelico = "Evangélico",
