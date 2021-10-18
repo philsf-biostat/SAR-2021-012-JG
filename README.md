@@ -5,7 +5,7 @@
 <!-- - v02: substituir ppp01/ppp02 pelo projeto -->
 <!-- - Remover esse bloco -->
 
-# Quantificação do efeito da receita recebida na classificação como bancada evangélica de deputados federais de 2018
+# Quantificação do efeito da receita recebida na autodenominação como evangélicos em deputados federais de 2018
 
 Criar um modelo explicativo para quantificar o efeito da receita recebida durante a campanha por deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica, ajustado pelo número de votos e outras características dos deputados e seus partidos.
 
