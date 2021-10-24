@@ -35,6 +35,13 @@ Análise Estatística para Josir Gomes (Doutorado IBICT/UFRJ, 2021).
 - [Visualização online][reportviz-v01]
 - [PDF][pdf-v01]
 
+## Análise associada
+
+Esta análise está associada à outra, complementar, que usa técnicas de *machine learning*.
+Aquela pode ser vista em:
+
+https://github.com/philsf-biostat/SAR-2021-011-JG
+
 ## Portfólio
 
 Esta análise está incluída no portfólio do consultor.
