@@ -1,9 +1,4 @@
 # setup -------------------------------------------------------------------
-# library(gt)
-# library(gtsummary)
-# library(moderndive)
-# library(broom)
-# library(broom.mixed)
 # library(caret)
 
 model.dat <- analytical %>%
@@ -29,6 +24,7 @@ m.sat <- glm(
 f.lower <- formula(m.min)
 f.upper <- formula(m.sat)
 
+# realizar o stepwise (modelo final salvo à parte)
 # m.step <- step(m.min, scope = list(lower = f.lower, upper = f.upper), direction = "forward", k = k)
 
 # adjusted ----------------------------------------------------------------

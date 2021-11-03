@@ -1,8 +1,5 @@
 # setup -------------------------------------------------------------------
-# library(data.table)
 library(tidyverse)
-# library(readxl)
-# library(lubridate)
 library(labelled)
 
 # data loading ------------------------------------------------------------
@@ -15,7 +12,6 @@ data.raw <- read_csv("dataset/eleitos_2018.csv") %>%
 # data cleaning -----------------------------------------------------------
 
 data.raw <- data.raw %>%
-  #   filter() %>%
   select(
     -eleito,
   )

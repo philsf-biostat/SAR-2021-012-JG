@@ -1,6 +1,4 @@
 # setup -------------------------------------------------------------------
-# library(ggplot2)
-# library(survminer)
 
 ff.col <- "steelblue" # good for single groups scale fill/color brewer
 ff.pal <- "Paired"    # good for binary groups scale fill/color brewer
@@ -28,6 +26,14 @@ gg.receitas <- data.raw %>%
   geom_histogram(binwidth = 100000, fill = ff.col) +
   facet_wrap(~name) +
   labs(x = "", y = "", subtitle = "Distribuição das receitas, por origem")
+
+gg.rec_total <- gg +
+  geom_histogram(aes(total_receita), binwidth = .5, fill = ff.col) +
+  xlab(attr(analytical$total_receita, "label")) +
+  ylab("") +
+  facet_wrap(~ evangelico)
+
+# testes ------------------------------------------------------------------
 
 # data.raw %>%
 #   filter(!is.na(igreja)) %>%
@@ -57,9 +63,3 @@ gg.receitas <- data.raw %>%
 #   geom_vline(xintercept = 5, col = "red") +
 #   xlab(attr(analytical$num_votos, "label")) +
 #   ylab(attr(analytical$total_receita, "label"))
-
-gg.rec_total <- gg +
-  geom_histogram(aes(total_receita), binwidth = .5, fill = ff.col) +
-  xlab(attr(analytical$total_receita, "label")) +
-  ylab("") +
-  facet_wrap(~ evangelico)
