@@ -1,10 +1,3 @@
-<!-- Instruções -->
-
-<!-- - substituir yyyy-NNN-XX -->
-<!-- - v01: substituir mmm01/mmm02 pela milestone -->
-<!-- - v02: substituir ppp01/ppp02 pelo projeto -->
-<!-- - Remover esse bloco -->
-
 # Quantificação do efeito da receita recebida na autodenominação como evangélicos em deputados federais de 2018
 
 Criar um modelo explicativo para quantificar o efeito da receita recebida durante a campanha por deputados federais eleitos em 2018 na classificação como pertencendo à bancada evangélica, ajustado pelo número de votos e outras características dos deputados e seus partidos.
@@ -40,14 +33,14 @@ Análise Estatística para Josir Gomes (Doutorado IBICT/UFRJ, 2021).
 Esta análise está associada à outra, complementar, que usa técnicas de *machine learning*.
 Aquela pode ser vista em:
 
-https://github.com/philsf-biostat/SAR-2021-011-JG
+<https://philsf-biostat.github.io/SAR-2021-011-JG/>
 
 ## Portfólio
 
 Esta análise está incluída no portfólio do consultor.
 Outras análises também podem ser vistas em:
 
-https://philsf-biostat.github.io/
+<https://philsf-biostat.github.io/>
 
 <!-- --- -->
 

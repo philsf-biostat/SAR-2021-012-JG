@@ -2,7 +2,7 @@
 title: "Plano Analítico para Quantificação do efeito da receita recebida na autodenominação como evangélicos em deputados federais de 2018"
 subtitle: 'DOCUMENTO: SAP-2021-012-JG-v01'
 author: '**De:** Felipe Figueiredo **Para:** Josir Gomes'
-date: '**Data:** 2021-10-12'
+date: '2021-10-12'
 output:
   html_document:
     fig_caption: yes
@@ -190,7 +190,7 @@ Esta análise será realizada utilizando-se o software `R` versão `r getRversio
 
 Tanto este plano analítico como o relatório correspondente (**SAR-2021-012-JG-v01**) podem ser obtidos no seguinte endereço:
 
-https://github.com/philsf-biostat/SAR-2021-012-JG/
+<https://philsf-biostat.github.io/SAR-2021-012-JG/>
 
 ## Análise exploratória de dados
 
