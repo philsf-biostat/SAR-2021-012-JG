@@ -36,6 +36,8 @@ panderOptions('table.split.table', 160)
 
 ---
 
+**Plano Analítico para Quantificação do efeito da receita recebida na autodenominação como evangélicos em deputados federais de 2018**
+
 **Histórico do documento**
 
 ```{r history}
